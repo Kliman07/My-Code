@@ -1,0 +1,43 @@
+using System;
+
+namespace Bubble_sort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var array = new int[] 
+            {
+                8,7,6,5,4,3,2,1
+            };
+            BubbleSort(ref array);
+            foreach (int elem in array)
+            {
+                Console.Write("{0} ",elem);
+            }
+            Console.WriteLine();
+        }
+
+        static int[] BubbleSort(ref int[] array)
+        {
+            bool ArraySwapped = true;
+            do
+            {
+                ArraySwapped = false;
+                for (int i = 0; i < array.Length - 1; i++)
+                {
+                    if (array[i] > array[i + 1])
+                    {
+                        int temp = array[i];
+                        array[i] = array[i + 1];
+                        array[i + 1] = temp;
+                        ArraySwapped = true;
+                    }
+                }
+            }
+            while (ArraySwapped);
+            return array;
+        }
+    }
+}
+
