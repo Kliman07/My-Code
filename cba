@@ -1,0 +1,19 @@
+program cba;
+uses crt;
+    var 
+        n,mem,i:Integer;
+        nmbrs:String;
+begin
+    readln(n);
+    readln(nmbrs);
+    mem:=1;
+    for i:=1 to length(nmbrs) do
+    begin
+        if copy(nmbrs,mem,i) = ' ' then
+        begin
+            mem := length(copy(nmbrs,mem,i));
+            continue
+        end;
+    end;
+end.
+
