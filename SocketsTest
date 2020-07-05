@@ -1,0 +1,24 @@
+using System;
+using System.Net;
+using System.Net.Sockets;
+
+namespace Sockets_in_CS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            byte[] array = System.Text.Encoding.UTF8.GetBytes("Hello World!");
+            using (var conn = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
+            {
+                conn.Bind(new IPEndPoint(new IPAddress(new byte[] { 192, 168, 0, 175 }),8866));
+                conn.Listen(1);
+
+                while (!conn.Connected) { }
+
+                conn.Send(array);
+                conn.Close();
+            }
+        }
+    }
+}
