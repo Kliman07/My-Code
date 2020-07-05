@@ -1,0 +1,10 @@
+program if_test;
+uses crt;
+var a: Integer;
+begin
+readln(a);
+  if a>5 then
+  write('Да')
+  else
+  writeln('Нет');
+end.
