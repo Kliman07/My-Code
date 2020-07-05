@@ -1,0 +1,17 @@
+id = input()
+a = ''
+for i in range(id.find(' ')):
+	a += id[i]
+else: 
+    a = int(a)
+b = ''
+i = id.find(' ') + 1
+while i != len(id):
+	b+=id[i]
+	i+=1
+else:
+	b=int(b)	
+if (a > 10**9) or (b > 10**9):
+	raise SystemExit(2)
+else:
+	print(a+b)
