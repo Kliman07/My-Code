@@ -1,0 +1,16 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace Socnet
+{
+
+    public class Socnet 
+    {
+       private static void Main()
+       {
+          
+       }
+    }
+}
